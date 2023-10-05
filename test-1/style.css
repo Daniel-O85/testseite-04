@@ -1,0 +1,296 @@
+/*************** CSS ****************/
+
+/************ Style für den Body ***********/
+
+body {
+    background-image: url(./bilder/hintergrund.avif);
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*************** Style für den Header ******************/
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: ridge dodgerblue 8px;
+    border-radius: 45px;
+    height: 120px;
+    background-color: rgba(240, 248, 255, 0.705);
+
+}
+
+header .logo {
+    width: 100px;
+    height: 100px;
+    margin-top: 2px;
+    border: ridge dodgerblue 8px;
+    border-radius: 45px;
+}
+
+/************* Wabbel Animation für das Logo *************/
+
+header .logo {
+    animation: Logo 2s ease 1.5s 1 normal forwards;
+}
+
+@keyframes Logo {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+header table tr a {
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 30px;
+    color: rgb(42, 55, 120);
+    font-family: cursive;
+}
+
+header .suche {
+    height: 30px;
+    width: 300px;
+    margin-top: 40px;
+    border: ridge dodgerblue 8px;
+    border-radius: 45px;
+    padding: 15px;
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+header .suche::placeholder {
+    color: rgb(42, 55, 120);
+}
+
+/************* Blink Animation für die Suche *************/
+
+header .suche {
+    animation: suche 2s ease 1s 3 normal forwards;
+}
+
+@keyframes suche {
+
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+/************* Style für den Main Index und Impress **************/
+
+main div h3 {
+    border: ridge dodgerblue 8px;
+    border-radius: 45px;
+    color: rgb(42, 55, 120);
+    font-family: cursive;
+    background-color: rgba(240, 248, 255, 0.705);
+    width: fit-content;
+    padding: 5px;
+}
+
+/************* Style für den Main Startseite **************/
+.mainstart {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 100px;
+}
+
+.mainstart .antalya {
+    grid-column-start: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.mainstart .zweistadt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    grid-column-end: span 2;
+}
+
+.mainstart p {
+    border: ridge dodgerblue 8px;
+    border-radius: 45px;
+    background-color: rgba(240, 248, 255, 0.705);
+    padding: 25px;
+    font-size: 25px;
+    font-family: cursive;
+    color: rgb(42, 55, 120);
+    width: 600px;
+    height: 400px;
+    overflow: auto;
+}
+
+.mainstart p:hover {
+    background-color: aliceblue;
+}
+
+.mainstart p::-webkit-scrollbar {
+    display: none;
+}
+
+.mainstart .antalyaimg,
+.mainstart .athenimg,
+.mainstart .barcelonaimg,
+.mainstart .sydneyimg {
+    width: 600px;
+    height: 400px;
+    border: ridge dodgerblue 8px;
+    border-radius: 45px;
+    padding: 15px;
+    background-color: rgba(124, 189, 255, 0.751);
+    transition: 1s;
+}
+
+.mainstart img:hover {
+    width: 800px;
+    height: 600px;
+}
+
+.mainstart .antalya,
+.mainstart .zweistadt,
+.mainstart .sydney {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/************* Style für den Main Impressum **************/
+.mainimp {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.mainimp .kontakt {
+    grid-row-start: 2;
+    margin: 50px;
+}
+
+.mainimp .table {
+    padding: 25px;
+    font-size: 25px;
+    font-family: cursive;
+    color: rgb(42, 55, 120);
+    border: ridge dodgerblue 8px;
+    border-radius: 45px;
+    background-color: rgba(240, 248, 255, 0.705);
+    width: fit-content;
+}
+
+.mainimp .adresse {
+    grid-row-start: 2;
+    grid-column-start: 3;
+    margin: 50px;
+}
+
+.mainimp .disclaimer {
+    grid-row-start: 3;
+    grid-column-end: span 3;
+    margin: 100px;
+}
+
+.mainimp .disclaimertext {
+    grid-row-start: 3;
+    grid-column-end: span 3;
+    padding: 25px;
+    font-size: 25px;
+    font-family: cursive;
+    color: rgb(42, 55, 120);
+    border: ridge dodgerblue 8px;
+    border-radius: 45px;
+    background-color: rgba(240, 248, 255, 0.705);
+    width: fit-content;
+}
+
+.mainimp .disclaimertext:hover {
+    background-color: aliceblue;
+}
+
+.mainimp div .johnny {
+    width: 150px;
+    border-radius: 25px;
+}
+
+.mainimp .chef {
+    border: ridge dodgerblue 8px;
+    border-radius: 45px;
+    padding: 15px;
+    background-color: rgba(240, 248, 255, 0.705);
+    width: fit-content;
+    font-family: cursive;
+    color: rgb(42, 55, 120);
+    text-align: center;
+}
+
+.mainimp .verant {
+    margin: 100px;
+}
+
+
+/**************** Style für den Footer *****************/
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 250px;
+    border: ridge dodgerblue 8px;
+    border-radius: 45px;
+    background-color: rgba(240, 248, 255, 0.705);
+}
+
+footer .footertable {
+    margin: 30px 0px 40px 50px;
+    line-height: 45px;
+    font-size: 25px;
+    color: rgb(42, 55, 120);
+    font-family: cursive;
+}
+
+footer .social img {
+    width: 50px;
+    height: 50px;
+    margin-top: 180px;
+    padding: 10px
+}
+
+footer .pay img {
+    width: 50px;
+    height: 50px;
+    margin: 5px 50px 5px 0px;
+}
